@@ -1,0 +1,35 @@
+.App p {
+  padding: 10px;
+}
+
+.social-card {
+  color: #333;
+  padding: 0 10px;
+  max-width: 180px;
+  margin: 15px;
+  border: 1px solid #000;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-card h2 {
+  font-size: 0.8em;
+  text-align: left;
+}
+
+.social-card small {
+  display: block;
+  font-size: .7em;
+  font-weight: 400;
+  color: #999;
+  max-width: 115px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.social-card img {
+  height: 36px;
+  width: 36px;
+}
