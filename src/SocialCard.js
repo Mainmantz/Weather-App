@@ -4,13 +4,13 @@ class SocialCard extends React.Component {
 
   render() {
     return (
-      <section className="social-card"  onClick = {this.props.click}>
-        <h2>
-          {this.props.firstName} {this.props.lastName}
-          <small>{this.props.email}</small>
-        </h2>
+      <figure className="social-card"  onClick = {this.props.click}>
+        <div>{this.props.day}</div>
         <img src={this.props.image} alt="" />
-      </section>
+        <figcaption>
+        {this.props.high_temp}° {this.props.low_temp}°
+        </figcaption>
+      </figure>
     );
   }
 }

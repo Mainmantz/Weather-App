@@ -5,17 +5,20 @@
 .social-card {
   color: #333;
   padding: 0 10px;
-  max-width: 180px;
-  margin: 15px;
+  max-width: 100px;
+  margin: 1px;
   border: 1px solid #000;
-  display: inline-flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; 
+  text-align: center;
+  width: 20%;
+  float: left;
 }
 
 .social-card h2 {
   font-size: 0.8em;
-  text-align: left;
+  text-align: justify;
+  width: 200px;
 }
 
 .social-card small {
@@ -23,7 +26,7 @@
   font-size: .7em;
   font-weight: 400;
   color: #999;
-  max-width: 115px;
+  max-width: 225px;
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -32,4 +35,6 @@
 .social-card img {
   height: 36px;
   width: 36px;
+  max-width: 100px;
+  border: 10px
 }
