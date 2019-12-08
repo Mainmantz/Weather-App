@@ -1,3 +1,15 @@
+
+// import axios from 'axios'
+
+// export default async getWeatherData()=>{
+//    return axios.get('https://dog.ceo/api/breeds/image/random')
+//   .then(response => {
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });
+// }
 const Weather = [
     {
         low_temp : 32,
