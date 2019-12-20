@@ -1,10 +1,10 @@
 import React from 'react';
 
-class SocialCard extends React.Component {
+class WeatherCard extends React.Component {
 
   render() {
     return (
-      <figure className="social-card"  onClick = {this.props.click}>
+      <figure className={this.props.className} onClick = {this.props.click}>
         <div>{this.props.day}</div>
         <img src={this.props.image} alt="" />
         <figcaption>
@@ -15,4 +15,4 @@ class SocialCard extends React.Component {
   }
 }
 
-export default SocialCard;
+export default WeatherCard;

@@ -1,0 +1,60 @@
+.App{
+  margin-top: 30%;
+}
+
+.App p {
+  /* padding: 10px; */
+  font-size: 20px;
+  /* left: 32%; */
+  /* position: relative; */
+  text-align: center;
+}
+
+.hour-card{
+  left: 0%;
+  position: relative;
+  color: #333;
+  padding: 0 10px;
+  max-width: 100px;
+  margin: 1px;
+  /* border: 1px solid #000; */
+  flex-direction: row;
+  justify-content: space-between; 
+  text-align: center;
+  width: 20%;
+  float: left;
+}
+
+.hour-card img {
+  height: 36px;
+  width: 36px;
+  max-width: 100px;
+  border: 10px
+}
+.day-card {
+  left: 20%;
+  position: relative;
+  color: #333;
+  padding: 0 10px;
+  max-width: 100px;
+  margin: 1px;
+  /* border: 1px solid #000; */
+  flex-direction: row;
+  justify-content: space-between; 
+  text-align: center;
+  width: 20%;
+  float: left;
+}
+
+/* .day-card h2 {
+  font-size: 0.8em;
+  text-align: justify;
+  width: 200px;
+} */
+
+.day-card img {
+  height: 36px;
+  width: 36px;
+  max-width: 100px;
+  border: 10px
+}
