@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
 import './App.css';
 import WeatherCard from './WeatherCard.js';
-import {formatFiveDayForecast, formatHourlyForecast, convertToFahrenheit, checkWeather} from '../Helpers/helpers.js'
+import {formatFiveDayForecast, formatHourlyForecast, convertToFahrenheit, checkWeatherType, getWeatherImg} from '../Helpers/helpers.js'
 import axios from 'axios'
 
 const apiKey = '4463523&appid=0b29cfcd03adcc33d49070a396e7723a';
@@ -36,14 +36,19 @@ class YourComponent extends Component {
         const WeatherList = [];
         let index         = 0;
         for (let key in weatherObj){
-            let currDay = weatherObj[key];
+            let currDay     = weatherObj[key];
+            let lowTemp     = convertToFahrenheit(currDay.temps_low);
+            let highTemp    = convertToFahrenheit(currDay.temps_high);
+            let weatherType = checkWeatherType(currDay);
+            let weatherImg  = getWeatherImg(weatherType);
+
             let socialCard = <WeatherCard key={index}
-                            className = {'day-card'}
+                            className = {'day-card ' + weatherType}
                             day = {key}
-                            image={checkWeather(currDay)}
+                            image={weatherImg}
                             click = {this.handleClick.bind(this, key, hourlyData, index)}
-                            low_temp = {convertToFahrenheit(currDay.temps_low)} 
-                            high_temp = {convertToFahrenheit(currDay.temps_high)} />
+                            low_temp = {lowTemp} 
+                            high_temp = {highTemp} />
 
             WeatherList.push(socialCard)
             index++;

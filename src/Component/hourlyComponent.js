@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
-import {convertToFahrenheit, checkWeather} from '../Helpers/helpers.js'
+import {convertToFahrenheit, checkWeatherType, getWeatherImg} from '../Helpers/helpers.js'
 import WeatherCard from './WeatherCard.js';
 
 import './App.css';
@@ -13,12 +13,17 @@ class YourComponent extends Component {
       let index         = 0;
 
       for (let i = 0; i < weatherData.data.length; i++){
-          let socialCard = <WeatherCard key={index}
-                              className = {'hour-card '}
-                              day = {weatherData.hours[i]}
-                              image={checkWeather(weatherData, i)}
-                              low_temp = {convertToFahrenheit(weatherData.data[i].temp_min)} 
-                              high_temp = {convertToFahrenheit(weatherData.data[i].temp_max)} />
+        let lowTemp     = convertToFahrenheit(weatherData.data[i].temp_min);
+        let highTemp    = convertToFahrenheit(weatherData.data[i].temp_max);
+        let weatherType = checkWeatherType(weatherData, i);
+        let weatherImg  = getWeatherImg(weatherType);
+        
+        let socialCard = <WeatherCard key={index}
+                            className = {'hour-card ' + weatherType}
+                            day = {weatherData.hours[i]}
+                            image={weatherImg}
+                            low_temp = {lowTemp} 
+                            high_temp = {highTemp} />
 
           HourList.push(socialCard);
           index++;

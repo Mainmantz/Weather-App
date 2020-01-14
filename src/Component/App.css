@@ -3,11 +3,16 @@
 }
 
 .App p {
-  /* padding: 10px; */
   font-size: 20px;
-  /* left: 32%; */
-  /* position: relative; */
   text-align: center;
+  font-size:15px;
+  font-family: 'Muli', sans-serif;
+}
+.App img {
+  height: 36px;
+  width: 36px;
+  max-width: 100px;
+  border: 10px;
 }
 
 .hour-card{
@@ -16,45 +21,54 @@
   color: #333;
   padding: 0 10px;
   max-width: 100px;
-  margin: 1px;
-  /* border: 1px solid #000; */
+  margin: 0.5px;
   flex-direction: row;
   justify-content: space-between; 
   text-align: center;
   width: 20%;
   float: left;
+  color: #ffffff;
+  font-size:15px;
+  font-family: 'Muli', sans-serif;
 }
 
-.hour-card img {
-  height: 36px;
-  width: 36px;
-  max-width: 100px;
-  border: 10px
-}
 .day-card {
-  left: 20%;
+  left: 15%;
   position: relative;
   color: #333;
   padding: 0 10px;
   max-width: 100px;
   margin: 1px;
-  /* border: 1px solid #000; */
   flex-direction: row;
   justify-content: space-between; 
   text-align: center;
   width: 20%;
   float: left;
+  color: #ffffff;
+  font-size:15px;
+  font-family: 'Muli', sans-serif;
 }
 
-/* .day-card h2 {
-  font-size: 0.8em;
-  text-align: justify;
-  width: 200px;
-} */
+.sunny {
+  border: 2px solid #fad193;
+  background: linear-gradient(to bottom right, #ffc368 0%, #ffff00 100%);
+  background-color: #FFC368;
+}
 
-.day-card img {
-  height: 36px;
-  width: 36px;
-  max-width: 100px;
-  border: 10px
+.cloud {
+  border: 2px solid #88afca;
+  background: linear-gradient(to bottom right, #88afca 0%, #666699 100%);
+  background-color: #88afca;
+}
+
+.rain {
+  border: 2px solid #649ded;
+  background: linear-gradient(to bottom right, #649ded 0%, #006699 100%);
+  background-color: #649ded;
+}
+
+.snow {
+  border: 2px solid #c2cddb;
+  background: linear-gradient(to bottom right, #c2cddb 0%, #99ffcc 100%);
+  background-color: #c2cddb;
 }

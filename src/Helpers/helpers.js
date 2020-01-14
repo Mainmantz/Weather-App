@@ -7,17 +7,32 @@ export const cardClicked = (day,e) => {
 export const convertToFahrenheit = (temp) => {
     return ((temp - 273.15)* 1.8000+ 32.00).toFixed(0)
   }
-export const checkWeather = (Weather, i) => {
+export const checkWeatherType = (Weather, i) => {
     if (!i){
       i = 0;
     }
     if (Weather.weather[i][0].description.indexOf('cloud') > -1){
-        return Images.cloud;
+        return 'cloud';
     }
     if (Weather.weather[i][0].description.indexOf('rain') > -1){
-        return Images.rain;
+        return 'rain';
     }
     if (Weather.weather[i][0].description.indexOf('sun') > -1){
+        return 'sunny';
+    }
+    else return 'snow';
+  }
+  export const getWeatherImg = (Weather, i) => {
+    if (!i){
+      i = 0;
+    }
+    if (Weather === 'cloud'){
+        return Images.cloud;
+    }
+    if (Weather === 'rain'){
+        return Images.rain;
+    }
+    if (Weather === 'sunny'){
         return Images.sunny;
     }
     else return Images.snow;
@@ -80,4 +95,4 @@ const dateStringToDay = (string) => {
 }
 
 
-export default {formatFiveDayForecast, cardClicked , convertToFahrenheit, checkWeather};
+export default {formatFiveDayForecast, cardClicked , convertToFahrenheit, checkWeatherType, getWeatherImg};
